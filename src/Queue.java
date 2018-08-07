@@ -2,12 +2,11 @@ public class Queue {
    // your code is here
  private int maxSize=3;
  private int[] Storage=new int[maxSize];
- private int top = -1;
- static int  indx=-1;
+ static int  index=-1;
 
  public void push(int pushedElement) {
-  if(indx<maxSize) {
-   Storage[++indx] = pushedElement;
+  if(index < maxSize) {
+   Storage[++index] = pushedElement;
   }
  }
  public long pop() {
@@ -16,7 +15,7 @@ public class Queue {
    Storage[i-1]=Storage[i];
   }
   Storage[Storage.length-1]=0;
-  indx--;
+  index--;
   return temp;
  }
 

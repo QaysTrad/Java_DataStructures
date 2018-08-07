@@ -1,18 +1,17 @@
 public class Stack {
     private int maxSize=3;
-    private int[] Storage=new int[maxSize];
-    private int top = -1;
-    static int  indx=-1;
+    private int[] Storage = new int[maxSize];
+    static int  index = -1;
 
     public void push(int pushedElement) {
-        if(indx<maxSize) {
-            Storage[++indx] = pushedElement;
+        if(index<maxSize) {
+            Storage[++index] = pushedElement;
         }
     }
     public long pop() {
-        int temp=Storage[indx];
-        Storage[indx]=0;
-        indx--;
+        int temp = Storage[index];
+        Storage[index] = 0;
+        index--;
         return temp;
     }
 
